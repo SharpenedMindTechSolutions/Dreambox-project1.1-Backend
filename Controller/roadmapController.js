@@ -7,9 +7,9 @@ import PDFDocument from "pdfkit";
 dotenv.config();
 
 // Initialize Google Generative AI with your API Key
-const genAI = new GoogleGenerativeAI("AIzaSyAYZVfrOFjgj2sBPOkU9lfbLAmzdY-bY1I");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-
+ 
 // ===== GENERATE ROADMAP =====
 // const generateRoadmap = async (req, res) => {
 //   const { careerAspiration, industryField, userId } = req.body;
